@@ -1,0 +1,18 @@
+These tools work but are in very early development stages...
+
+pushToCloud.rb
+This is for pushing a single file to Cloud FIles. You will need to edit the file and add your Cloud Files user and API Key. 
+The script requires the Rackspace Ruby lib (available on github) to be installed. It also utilises log files in the default /var/log/ directory.
+TODO: 
+  1. Optional Log Files
+  2. Better logging of issues
+  3. User / APIKey as vars
+
+syncToCloud.rb
+Yet to be committed to github. Will sync an entire directory to a Cloud Files container based on file size.
+TODO:
+  1. Add support for file checksum
+  2. Add conf file to store config values for both scripts.
+
+Run each script with no params for instructions.
+
