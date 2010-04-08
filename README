@@ -17,6 +17,7 @@ TODO:
   1. Add support for file checksum
   2. Add conf file to store config values for both scripts.
   3. Finish file size comparison.
+  4. Add delete support
 
 Run each script with no params for instructions.
 

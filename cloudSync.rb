@@ -43,7 +43,13 @@ if cf then
             else
                 strpath = 
                 if container.object_exists?(path)
-                    puts path + " has already been transfered"
+                    tmpo = container.object(path)
+                    if tmpo.bytes != File.size(path) then
+                        container.delete_object(path)
+                        newfile = container.create_object(path, true)
+                        newfile.load_from_filename(path)
+                        log.puts(now.strftime('%d/%m/%Y %I:%M:%S') + " Transferred " + path)
+                    end
                 else
                     newfile = container.create_object(path, true)
                     newfile.load_from_filename(path)
