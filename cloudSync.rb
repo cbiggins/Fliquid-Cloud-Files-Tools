@@ -44,7 +44,7 @@ if cf then
                 strpath = 
                 if container.object_exists?(path)
                     tmpo = container.object(path)
-                    if tmpo.bytes != File.size(path) then
+                    if tmpo.bytes.eql? File.size(path) then
                         container.delete_object(path)
                         newfile = container.create_object(path, true)
                         newfile.load_from_filename(path)
